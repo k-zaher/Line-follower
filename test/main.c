@@ -7,11 +7,11 @@
 #define QTR_EMITTERS_ON 1
 #define QTR_EMITTERS_ON_AND_OFF 2
 
-    unsigned int *calibratedMinimumOn;
-	unsigned int *calibratedMaximumOn;
-	unsigned int *calibratedMinimumOff;
-	unsigned int *calibratedMaximumOff;
-	unsigned int _maxValue;
+unsigned int calibratedMinimumOn[6];
+unsigned int calibratedMaximumOn[6];
+unsigned int calibratedMinimumOff[6];
+unsigned int calibratedMaximumOff[6];
+unsigned int _maxValue = 1023;
 
 int main(void)
 {
@@ -26,12 +26,12 @@ int main(void)
 
 void emittersOff()
 {
-    PORTD = PIND&(1<<PD7);
+    PORTD = PIND&(~(1<<PD7));
 }
 
 void emittersOn()
 {
-    PORTD = PIND&(~1<<PD7);
+    PORTD = PIND|(1<<PD7);
 }
 
 void calibrateOnOrOff(unsigned int **calibratedMinimum,
@@ -39,33 +39,22 @@ void calibrateOnOrOff(unsigned int **calibratedMinimum,
 										unsigned char readMode)
 {
 	int i;
+	int j;
 	unsigned int sensor_values[16];
 	unsigned int max_sensor_values[16];
 	unsigned int min_sensor_values[16];
 
 	// Allocate the arrays if necessary.
-	if(*calibratedMaximum == 0)
-	{
-		//***** put something instead of malloc
 
-		// Initialize the max and min calibrated values to values that
-		// will cause the first reading to update them.
 
-		for(i=0;i<6;i++)
-			(*calibratedMaximum)[i] = 0;
-	}
-	if(*calibratedMinimum == 0)
-	{
-		//***** put something instead of malloc
-		// If the malloc failed, don't continue.
-		if(*calibratedMinimum == 0)
-			return;
+    for(i=0;i<6;i++)
+        calibratedMaximum[i] = 0;
 
-		for(i=0;i<6;i++)
-			(*calibratedMinimum)[i] = _maxValue;
-	}
+    for(i=0;i<6;i++)
+        (*calibratedMinimum)[i] = _maxValue;
 
-	int j;
+
+
 	for(j=0;j<10;j++)
 	{
 		//  take it from samadony 		read(sensor_values,readMode);

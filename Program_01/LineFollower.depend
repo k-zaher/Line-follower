@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1259481372 source:d:\bue\robogames\line follower\programs\uart_test\uart.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<avr/pgmspace.h>
+	"uart.h"
+
+1268768430 d:\bue\robogames\line follower\programs\uart_test\uart.h
+
+1268768202 source:d:\bue\robogames\line follower\programs\uart_test\main.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+	"uart.h"
+
+1259481372 source:d:\bue\robogames\line follower\programs\program_01\uart.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<avr/pgmspace.h>
+	"uart.h"
+
+1268768430 d:\bue\robogames\line follower\programs\program_01\uart.h
+
+1268842974 source:d:\bue\robogames\line follower\programs\program_01\main.c
+	<avr/io.h>
+	<avr/interrupt.h>
+	<util/delay.h>
+	<avr/pgmspace.h>
+	<stdlib.h>
+	"uart.h"
+
