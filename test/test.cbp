@@ -38,18 +38,8 @@
 			<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
 			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
 		</ExtraCommands>
-		<Unit filename="PololuQTRSensors.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="PololuQTRSensors.h">
-			<Option target="Release" />
-		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="qtr.h">
-			<Option target="Release" />
 		</Unit>
 		<Extensions>
 			<code_completion />

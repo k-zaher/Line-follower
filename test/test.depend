@@ -1,48 +1,11 @@
 # depslib dependency file v1.0
-1268679328 source:c:\users\kareem\desktop\test\test\main.c
-	"OrangutanLCD.cpp"
-	<util/delay.h>
-
-1259585638 c:\users\kareem\desktop\test\test\orangutan.h
-	<pololu/analog.h>
-	<pololu/buzzer.h>
-	<pololu/time.h>
-	<pololu/motors.h>
-	<pololu/lcd.h>
-	<pololu/leds.h>
-	<pololu/pushbuttons.h>
-	<pololu/qtr.h>
-	<pololu/encoders.h>
-	<pololu/resources.h>
-	<pololu/digital.h>
-	<pololu/servos.h>
-	<pololu/pulsein.h>
-	<pololu/OrangutanSerial/OrangutanSerial.h>
-	<pololu/OrangutanSPIMaster/OrangutanSPIMaster.h>
-	<pololu/OrangutanSVP/OrangutanSVP.h>
-
-1268677363 source:c:\users\kareem\desktop\test\test\orangutanlcd.cpp
+1268835891 source:c:\users\kareem\desktop\new\test\pololuqtrsensors.cpp
 	<avr/io.h>
-	<avr/pgmspace.h>
-	"OrangutanLCDPrivate.h"
-	"OrangutanLCD.h"
-	"../OrangutanTime/OrangutanTime.h"
-	<stdio.h>
+	<stdlib.h>
+	"PololuQTRSensors.h"
 	<util/delay.h>
 
-1268679271 c:\users\kareem\desktop\test\test\orangutanlcdprivate.h
+1268835805 c:\users\kareem\desktop\new\test\pololuqtrsensors.h
 
-1259585638 c:\users\kareem\desktop\test\test\orangutanlcd.h
-
-1259585638 c:\users\kareem\desktop\test\test\lcd.h
-	<avr/pgmspace.h>
-
-1268679355 c:\users\kareem\desktop\test\test\orangutanlcd.cpp
-	<avr/io.h>
-	<avr/pgmspace.h>
-	"OrangutanLCDPrivate.h"
-	"OrangutanLCD.h"
-	"../OrangutanTime/OrangutanTime.h"
-	<stdio.h>
-	<util/delay.h>
+1268835805 source:c:\users\kareem\desktop\new\test\pololuqtrsensors.h
 
