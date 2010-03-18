@@ -1,6 +1,8 @@
 /*
  */
 
+#include <avr/io.h>
+
 #define QTR_EMITTERS_OFF 0
 #define QTR_EMITTERS_ON 1
 #define QTR_EMITTERS_ON_AND_OFF 2
@@ -92,7 +94,7 @@ void readCalibrated()
 	// read the needed values
 	//read(sensor_values,readMode);
 
-	for(i=0;i<_numSensors;i++)
+	for(i=0;i<6;i++)
 	{
 		unsigned int calmin,calmax;
 		unsigned int denominator;
